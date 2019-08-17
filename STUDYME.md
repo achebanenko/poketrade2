@@ -1,11 +1,13 @@
+TOC
 
-- React's Portals
+- [React's Portals](#reacts-portals)
+- [copyStyles](#copystyles)
 
-## 1. React's Portals
+## React's Portals
 
-When to use? Modals, Tooltips, Floating menus, Widgets.  
+When to use? Modals, Tooltips, Floating menus, Widgets.
 
-https://codeburst.io/reacts-portals-in-3-minutes-9b2efb74e9a9  
+https://codeburst.io/reacts-portals-in-3-minutes-9b2efb74e9a9
 
 ```
 const Outsider = () => {
@@ -24,15 +26,12 @@ class App extends Component {
 #### Scope + Bubbling
 
 A brilliant thing about portals is that a component rendered in a portal acts as if it is still in the React tree. It behaves like a normal React child. You can pass it props, it will react to updates etc.  
-Events fired in a portal will also bubble up through the React tree!  
+Events fired in a portal will also bubble up through the React tree!
 
-
-####
-
-https://hackernoon.com/using-a-react-16-portal-to-do-something-cool-2a2d627b0202  
-
+https://hackernoon.com/using-a-react-16-portal-to-do-something-cool-2a2d627b0202
 
 poketrade/components/Modal.js:
+
 ```
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -82,6 +81,8 @@ export default connect(
   }
 )(Modal);
 ```
+
+## copyStyles
 
 ```
 function copyStyles(sourceDoc, targetDoc) {
