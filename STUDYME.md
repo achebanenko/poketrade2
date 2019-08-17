@@ -1,10 +1,13 @@
 
------ 1. React’s Portals -----
+- React's Portals
 
-//////////
+## 1. React's Portals
 
-https://codeburst.io/reacts-portals-in-3-minutes-9b2efb74e9a9
+When to use? Modals, Tooltips, Floating menus, Widgets.  
 
+https://codeburst.io/reacts-portals-in-3-minutes-9b2efb74e9a9  
+
+```
 const Outsider = () => {
   ReactDOM.createPortal(<div>I'm outside!</div>, document.body)
 }
@@ -16,22 +19,21 @@ class App extends Component {
     )
   }
 }
+```
 
-When to use? Modals, Tooltips, Floating menus, Widgets.
+#### Scope + Bubbling
 
-Scope + Bubbling
-
-A brilliant thing about portals is that a component rendered in a portal acts as if it is still in the React tree. It behaves like a normal React child. You can pass it props, it will react to updates etc.
-Events fired in a portal will also bubble up through the React tree!
-
-
-//////////
-
-https://hackernoon.com/using-a-react-16-portal-to-do-something-cool-2a2d627b0202
+A brilliant thing about portals is that a component rendered in a portal acts as if it is still in the React tree. It behaves like a normal React child. You can pass it props, it will react to updates etc.  
+Events fired in a portal will also bubble up through the React tree!  
 
 
-poketrade/components/Modal.js
----
+####
+
+https://hackernoon.com/using-a-react-16-portal-to-do-something-cool-2a2d627b0202  
+
+
+poketrade/components/Modal.js:
+```
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
@@ -79,9 +81,9 @@ export default connect(
     showModal
   }
 )(Modal);
----
+```
 
-
+```
 function copyStyles(sourceDoc, targetDoc) {
   Array.from(sourceDoc.styleSheets).forEach(styleSheet => {
     if (styleSheet.cssRules) { // for <style> elements
@@ -102,5 +104,4 @@ function copyStyles(sourceDoc, targetDoc) {
     }
   });
 }
-
-
+```
